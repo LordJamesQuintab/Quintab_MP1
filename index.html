@@ -11,32 +11,34 @@
     />
     <link rel="shortcut-icon" href="favicon.ico" type="image/z-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
-    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
-    <div id="header">
+    <div id="header" >
       <div class="container">
-        <nav class="navbar">
+        <nav class="navbar navbar-expand-md fixed-top" >
           <!-- <img src="" class="logo" /> -->
           <a href="index.html" class="logo">LJ</a>
           <ul id="sidemenu">
             <li><a href="#header">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Skills</a></li>
-            <li><a href="#porfolio">Portfolio</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#contact">Contact</a></li>
             <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
           </ul>
           <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
+        
 
         <!-- Header -->
         <div class="header-text">
-          <p>Your Aspiring</p>
-          <h1>Web Developer <span> <br>Lord James</span><br /></h1>
+          
+          <h1>Your Aspiring</h1>
+      <h3 class="text-animation"><span></span></h3>
+      <h1> <span>Lord James Quintab</span></h1>
         </div>
       </div>
       
@@ -76,6 +78,8 @@
               <ul>
                 <li><span>NCII</span><br />Computer Systems Servicing</li>
                 <li><span>Best in Capstone</span><br />IKeeptIt An Equipment Invertory Systems in Consolatrix College</li>
+                <li></li>
+               
               </ul>
             </div>
             
@@ -83,9 +87,7 @@
         </div>
       </div>
     </div>
-    <br>
-    <br>
-
+    
     <!-- Services -->
     <!-- <div id="services">
 
@@ -144,7 +146,7 @@
     <div class="tech-con">
       <div class="thecard">
         <div class="thefront"><i class='bx bxl-html5'></i><p> HTML</p></div>
-        <div class="theback">HTML (HyperText Markup Language) is the standard language for creating web pages. It uses tags to structure content, including text, images, and links, for web browsers.</div>
+        <div class="theback">HTML (HyperText Markup Language) is the standard language for creating web pages, structuring content, and defining elements on the web.</div>
       </div>
       <div class="thecard">
         <div class="thefront"> <i class='bx bxl-css3' ></i><p> CSS</p></div>
@@ -161,12 +163,12 @@
       </div>
       <div class="thecard">
         <div class="thefront"><i class='bx bxl-react' ></i><p> React</p></div>
-        <div class="theback">React.js is a JavaScript library for building user interfaces, particularly single-page applications, by enabling developers to create reusable UI components efficiently.
+        <div class="theback">React.js is a JavaScript library for building user interfaces, enabling efficient, component-based development of interactive web applications.
         </div>
       </div>
       <div class="thecard">
         <div class="thefront"><i class='bx bxl-tailwind-css' ></i><p>TailwindCSS</p></div>
-        <div class="theback">TailwindCSS is a utility-first CSS framework for rapidly building custom designs. It provides pre-built classes directly in HTML, promoting a streamlined development process and responsive design.</div>
+        <div class="theback">Tailwind CSS is a utility-first CSS framework providing low-level building blocks, enabling rapid, customizable styling for web development.</div>
       </div>
       <div class="thecard">
         <div class="thefront"><i class='bx bxl-php' ></i><p> PHP</p></div>
@@ -174,14 +176,14 @@
       </div>
       <div class="thecard">
         <div class="thefront"><i class="fa-solid fa-database"></i><p> MySQL</p></div>
-        <div class="theback">It seems like you might be referring to "MySQL," which is a popular relational database management system (RDBMS). It's widely used for web applications and can handle large databases efficiently.</div>
+        <div class="theback">MySQL is an open-source relational database management system used for storing, organizing, and retrieving data in various applications.</div>
       </div>
       </div>
     </div>
   </section>
   
     <!-- Portfolio -->
-    <div id="porfolio">
+    <div id="portfolio">
       <div class="container">
         <h1 class="sub-title">My Portfolio</h1>
         <div class="work-list">
@@ -225,11 +227,12 @@
             </div>
           </div>
         </div>
-        <a href="https://github.com/LordJamesQuintab" class="btn"> See more <i class="fa-brands fa-github"></i></a>
+        <div class="button">
+        <a href="https://github.com/LordJamesQuintab" class=" btn btn2"> See more <i class="fa-brands fa-github"></i></a>
+      </div>
       </div>
     </div>
-    <br> 
-    <hr>
+ 
     <!-- Contact -->
     <div id="contact">
       <div class="container">
@@ -272,7 +275,13 @@
         <p>Copyright Lord James <i class="fa-solid fa-heart"></i> Quintab</p>
       </div>
     </div>
+    <script type="text/javascript">
+      window.addEventListener("scroll", function(){
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+      })
 
+    </script>
     <script>
       var tablinks = document.getElementsByClassName("tab-links");
       var tabcontents = document.getElementsByClassName("tab-contents");
@@ -306,7 +315,7 @@
 
     <script>
       const scriptURL =
-        "https://script.google.com/macros/s/AKfycbyVz3qvz-EVTQyBNitLdsMKKp8nfNUKPPjePHX5aCmtlCVOZkr1dGb5nRoGHkODO7ehvQ/exec";
+        "https://script.google.com/macros/s/AKfycbyVz3qvz-EVTQyBNitLdsMKKp8nfNUKPPjePHX5aCmtlCVOZkr1dGb5nRoGHkODO7ehvQ/exec"
       const form = document.forms["submit-to-google-sheet"];
       const msg = document.getElementById("msg");
 
